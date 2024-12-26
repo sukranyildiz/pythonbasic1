@@ -1,0 +1,142 @@
+#VARİABLES AND STRİNGS*
+
+#Hello world
+print("Hello world!")
+
+#Hello world with a variable
+msg= "Hello world!"
+print(msg)
+
+#1.Concatenation (combining strings) - Operatörü ile Birleştirme
+first_name = 'albert' 
+last_name = 'einstein' 
+full_name = first_name + ' ' + last_name 
+print(full_name) 
+
+#2.join() Metodu
+words = ["albert", "einstein"]
+result = " ".join(words)  # Boşluk ile birleştiriyoruz
+print(result)  # Çıktı
+
+#LİSTS*
+
+#Make a list
+bikes = ['trek','redline','giant']
+
+#Bir listedeki ilk öğeyi al
+first_bike = bikes[0]
+
+#Son öğeyi al
+last_bike = bikes[-1] 
+
+# Listenin içindeki her bir bisiklet modelini yazdırma
+for bike in bikes:
+    print(bike)
+
+#Bisiklet adlarını büyük harfle yazdırmak
+for bike in bikes:
+    print(bike.upper())
+
+#Döngü İle İndeks Kullanma
+for index, bike in enumerate(bikes):
+    print(f"{index}: {bike}")
+
+#Listeye öge ekleme
+
+# Boş bir bisiklet listesi oluşturuluyor
+bikes = [] 
+
+# Listeye bisiklet modelleri ekleniyor
+bikes.append('Trek') 
+bikes.append('Redline') 
+bikes.append('Giant') 
+
+# Ekli bisiklet modellerini yazdırma
+print(bikes)
+
+#Listeye Birden Fazla Öğeyi Ekleme
+bikes.extend(['Specialized', 'Cannondale'])
+print(bikes)  # Çıktı: ['Trek', 'Redline', 'Giant', 'Specialized', 'Cannondale']
+
+#Belirli Bir İndekse Ekleme
+bikes.insert(1, 'Bianchi')  # 1. indeks konumuna 'Bianchi' ekle
+print(bikes)  # Çıktı: ['Trek', 'Bianchi', 'Redline', 'Giant', 'Specialized', 'Cannondale']
+
+#Making numerical lists 
+# Boş bir kareler listesi oluşturuluyor
+squares = [] 
+
+# 1'den 10'a kadar olan sayıların karelerini hesaplama
+for x in range(1, 11): 
+    squares.append(x**2)  # x'in karesini ekle
+
+# Kareler listesini yazdırma
+print(squares)
+
+#Listeyi dilimleme
+finishers = ['sam', 'bob', 'ada', 'bea']
+first_two = finishers[:2]  # 0. ve 1. indisleri al
+print(first_two)
+
+#Copying a List
+bikes = ['Trek', 'Redline', 'Giant']
+copy_of_bikes = bikes[:]  # Tüm öğeleri alarak yeni bir liste oluştur
+print(copy_of_bikes) 
+
+#TUPLE OLUŞTURMA
+# Tuple oluşturma (Tuple'lar listeler gibidir, ancak bir tuple'daki öğeler değiştirilemez.)
+dimensions = (1920, 1080)
+
+# Tuple içeriğini yazdırma
+print(dimensions)
+
+person = ("Alice", 30, 5.6)  #Birden Fazla Veri Tipini Destekler
+
+#Tuple’lar parantez () ile, listeler ise kare parantez [] ile tanımlanır.#
+
+#Conditional tests
+if x == 42:
+    print("x, 42'ye eşit.") 
+
+if x != 42:
+    print("x, 42'ye eşit değil.")
+
+if x > 42:
+    print("x, 42'den büyüktür.")    
+
+if x >= 42:
+    print("x, 42'ye eşit veya 42'den büyüktür.")
+
+#LİSTEDE ELEMAN KONTROLÜ#
+bikes = ['trek', 'cannondale', 'surly']
+
+# 'trek' listede var mı?
+if 'trek' in bikes:
+    print("'trek' bisikletler listesinde mevcut.")
+
+# 'surly' listede yok mu?
+if 'surly' not in bikes:
+    print("'surly' bisikletler listesinde yok.")
+else:
+    print("'surly' bisikletler listesinde mevcut.")
+
+#Değer Atama
+game_active = True  # Oyun aktif
+can_edit = False    # Düzenleme yapma izni yok
+
+print("Oyun aktif mi?", game_active)
+print("Düzenleme yapma izni var mı?", can_edit)  
+
+#if testi
+age = 20  # Yaş değişkeni
+
+if age >= 18:
+    print("Oy kullanabilirsiniz!")
+
+#Birden fazla koşulu kontrol etmek için   
+if age < 4: 
+    ticket_price = 0 
+elif age < 18: 
+    ticket_price = 10 
+else: 
+    ticket_price = 15 
